@@ -18,7 +18,7 @@ module.exports = function(grunt) {
         },
         watch: {
             files: ['less/*.less'],
-            tasks: ['less', 'postcss']
+            tasks: ['less']
         }
     });
     // Load the plugin that provides the "uglify" task.

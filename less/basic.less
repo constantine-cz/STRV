@@ -2,9 +2,123 @@
     Created on : 16.2.2015, 20:19:20
     Author     : Jiří Ludvar <ludvar.jiri@gmail.com>
 */
+
+@blue: #2ebcea;
+@blue_dark: #0090be;
+
 *{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    transition: 5s;
+    outline: none;
 }
+
+html{
+    font-family: 'Open Sans', sans-serif;
+    font-size: 1.4em;
+}
+img{
+    max-width: 100%;
+    height: auto;
+}
+h1, h2{
+    font-size: 1.6em;
+}
+h2{
+    margin-bottom: 0.6em;
+}
+
+p{
+    margin-bottom: 1em;
+}
+.inner{
+    padding: 0 25px;
+}
+#about .inner{
+    padding: 0 80px;
+}
+
+/* HEADER */
+#header{
+    background: url(../gfx/bg_mobile.jpg) -520px -70px no-repeat;
+    text-align: center;
+    color: #fff;
+    padding: 180px 0 425px;
+    position: relative;
+
+    h1{
+        margin: 50px 0;
+    }
+}
+
+#menu{
+    position: absolute;
+    bottom: 0;
+    height: 125px;
+    line-height: 125px;
+    background: rgba(20, 20, 20, 0.7);
+    width: 100%;
+    
+    li{
+        display: inline-block;
+        width: 33%;
+        float: left;
+        
+        a{
+            color: #fff;
+            text-decoration: none;
+            font-size: 1.2em;
+            display: block;
+            height: 125px;
+        }
+        
+        &.active a, &:hover a{
+            border-bottom: 7px solid @blue;
+        }
+    }
+}
+
+/* ABOUT */
+#about{
+    padding: 110px 0 80px;
+    
+    img{
+        display: block;
+        margin: 70px auto 0;
+    }
+}
+
+
+.request{
+    
+    input{
+       font-size: 1.2em; 
+    }    
+    .email{
+        padding: 0 120px 0 20px;
+        width: 90%;
+        height: 80px;
+        line-height: 80px;
+        margin: 0;
+        border: none;
+        border-radius:  10px 0 0 10px;
+        float: left;
+    }
+    .submit{
+        height: 80px;
+        line-height: 80px;
+        display: block;
+        width: 155px;
+        border: none;
+        background: @blue;
+        color: #fff;
+        float: right;
+        margin-top: -80px;
+        position: relative;
+        border-radius: 0 10px 10px 0;
+        
+        &:hover, &:active{
+            background: @blue_dark;
+        }
+    }
+} 
