@@ -34,16 +34,15 @@ p{
 .inner{
     padding: 0 25px;
 }
-#about .inner{
-    padding: 0 80px;
+form{
+    padding: 0 25px;
 }
 
-/* HEADER */
 #header{
     background: url(../gfx/bg_mobile.jpg) -520px -70px no-repeat;
     text-align: center;
     color: #fff;
-    padding: 180px 0 425px;
+    padding: 180px 0 350px;
     position: relative;
 
     h1{
@@ -58,12 +57,12 @@ p{
     line-height: 125px;
     background: rgba(20, 20, 20, 0.7);
     width: 100%;
-    
+
     li{
         display: inline-block;
         width: 33%;
         float: left;
-        
+
         a{
             color: #fff;
             text-decoration: none;
@@ -71,38 +70,107 @@ p{
             display: block;
             height: 125px;
         }
-        
+
         &.active a, &:hover a{
             border-bottom: 7px solid @blue;
         }
     }
 }
 
-/* ABOUT */
+#about, #everywhere, #task, #features, #signup{
+    padding: 100px 0;
+}
+
 #about{
-    padding: 110px 0 80px;
-    
     img{
         display: block;
         margin: 70px auto 0;
     }
 }
 
+#everywhere{
+    background: @blue;
+    color: #fff;
+}
+
+#task{
+    background: #f2f6f7;
+    padding-bottom: 0;
+
+    img{
+        display: block;
+        padding-top: 60px;
+    }
+}
+
+#features{
+    p{
+        margin-bottom: 3em;
+    }
+}
+
+#signup{
+    background: #243139;
+    color: #fff;
+}
+
+#sm{
+    margin: 0 auto;
+    overflow: hidden;
+    text-align: center;
+    padding: 60px 20px 0;
+    clear: both;
+}
+.fb, .twitter{
+    display: inline-block;
+    width: 100px;
+    height: 100px;
+    line-height: 100px;
+    border-radius: 50%;
+    text-align: center;
+    margin: 0 10px;
+
+    span{
+        display: inline-block;
+        vertical-align: middle;
+    }
+    &:hover, &:active{
+        background: #fff;
+    }
+
+}
+.fb {
+    span{
+        width: 16px;
+        height: 34px;
+        background: url(../gfx/icons/sm.png) 0 0 no-repeat;
+    }
+    &:hover span, &:active span{
+        background: url(../gfx/icons/sm.png) 0 -35px no-repeat;
+    }
+}
+.twitter {
+    span{
+        width: 34px;
+        height: 28px;
+        background: url(../gfx/icons/sm.png) -17px 0 no-repeat;
+    }
+    &:hover span, &:active span{
+        background: url(../gfx/icons/sm.png) -17px -35px no-repeat;
+    }
+}
 
 .request{
-    
     input{
-       font-size: 1.2em; 
+        font-size: 1.2em; 
     }    
     .email{
-        padding: 0 120px 0 20px;
-        width: 90%;
+        padding: 0 15px;
+        width: 100%;
         height: 80px;
         line-height: 80px;
-        margin: 0;
         border: none;
-        border-radius:  10px 0 0 10px;
-        float: left;
+        border-radius:  10px;
     }
     .submit{
         height: 80px;
@@ -112,13 +180,43 @@ p{
         border: none;
         background: @blue;
         color: #fff;
-        float: right;
-        margin-top: -80px;
         position: relative;
-        border-radius: 0 10px 10px 0;
-        
+        border-radius: 10px;
+        margin: 20px auto;
+
         &:hover, &:active{
             background: @blue_dark;
         }
     }
 } 
+
+@media  (min-width: 480px){
+    .showmini{
+        display: none;
+    }
+    .inner{
+        padding: 0 100px;
+    }
+
+    #header{
+        padding: 180px 0 425px;
+    }
+    #sm{
+        padding: 60px 60px 0;
+    }
+    .request{  
+        .email{
+            padding: 0 120px 0 20px;
+            width: 90%;
+            margin: 0;
+            float: left;
+            border-radius:  10px 0 0 10px;
+        }
+        .submit{
+            width: 155px;
+            float: right;
+            margin-top: -80px;
+            border-radius: 0 10px 10px 0;
+        }
+    } 
+}

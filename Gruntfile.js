@@ -6,9 +6,10 @@ module.exports = function(grunt) {
                 options: {
                     paths: ["css"],
                     sourceMap: true,
+                    sourceMapFileInline: true,
                     plugins: [
                         new (require('less-plugin-autoprefix'))({browsers: ["last 5 versions"]}),
-                        new (require('less-plugin-clean-css'))()
+                        new (require('less-plugin-clean-css'))({compatibility: "ie9", advanced: "true"})
                     ]
                 },
                 files: {
