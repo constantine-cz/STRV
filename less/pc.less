@@ -6,50 +6,129 @@
     html{
         font-size: 1em;
     }
+    .container{
+        max-width: 960px;
+        margin: 0 auto;
+    }
     #header{
-        background: url(../gfx/bg_mobile.jpg) -305px -145px no-repeat;
-        padding: 450px 0 350px;
+        background: url(../gfx/bg.jpg) 50% -310px no-repeat;
+        padding: 150px 0;
+        height: 650px;
 
-        .request{
-            max-width: 425px;
-            padding: 0;
+        h1{
+            margin: 25px 0;
         }
     }
     #menu{
         height: 70px;
         line-height: 70px;
 
-        li {
+        li{
             width: auto;
             float: none;
+            margin: 0 15px;
 
             a{
                 height: 70px;
-                padding: 0 30px;
-
+                padding: 0 20px;
             }
         }
     }
-
     #about{
-        background: url(../gfx/macbook.png) 580px 155px no-repeat;
+        background: url(../gfx/macbook.png) 640px 155px no-repeat;
         padding: 245px 0;
-        
+        height: 735px;
+
         .inner{
             width: 680px;
-            float: left;
         }
     }
+    #everywhere{
+        text-align: center;
+        padding: 105px 0;
+        height: 700px;
+
+        .inner{
+            width: 800px;
+            margin: 0 auto;
+        }
+    }
+    #task{
+        padding: 0;
+        
+        .inner{
+            margin-left: 400px;
+            max-width: 700px;
+        }
+        .container{
+            background: #f2f6f7 url(../gfx/iphone.png) -50px -235px no-repeat;
+            padding-top: 240px;
+            height: 580px;
+        }
+    }
+    #features{
+        overflow: hidden;
+        padding: 170px 0;
+
+        .inner{
+            max-width: 960px;
+            margin: 0 auto;
+            padding: 0;
+        }
+        .box{
+            width: 33%;
+            float: left;
+            padding: 0 25px;
+            text-align: center;
+            
+            h2{
+                margin-bottom: 30px;
+            }
+        }
+        .icon{
+            height: 150px;
+        }
+    }
+    #signup{
+        text-align: center;
+    }
+
     .request{
+        width:425px;
+        padding: 0;
+        margin: 0 auto;
+
         .email, .submit{
             height: 50px;
             line-height: 50px;
-            font-size: 1em;
+        }
+        .email{
+            width: 310px;
+            padding: 0 20px;
         }
         .submit{
-            margin-top: -50px;
+            width: 115px;
+            float: none;
+            margin-top: 0;
         }
-
     }
 
+}
+
+
+
+@media (min-width: 1280px){
+    #about{
+        background: url(../gfx/macbook.png) 115% 155px no-repeat;
+
+        .inner{
+            width: 480px;
+            padding: 0;
+        }
+    }
+}
+@media (min-width: 1600px){
+    #about{
+        background: url(../gfx/macbook.png) 90% 155px no-repeat;
+    }
 }
