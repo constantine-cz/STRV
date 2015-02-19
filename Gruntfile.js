@@ -17,6 +17,16 @@ module.exports = function(grunt) {
                 }
             }
         },
+        uglify: {
+            options: {
+                mangle: false
+            },
+            picturefill: {
+                files: {
+                    'js/picturefill.min.js': 'js/picturefill.js'
+                }
+            }
+        },
         watch: {
             files: ['less/*.less'],
             tasks: ['less']
@@ -25,6 +35,7 @@ module.exports = function(grunt) {
     // Load the plugin that provides the "uglify" task.
     grunt.loadNpmTasks('grunt-contrib-less');
     grunt.loadNpmTasks('grunt-contrib-watch');
+    grunt.loadNpmTasks('grunt-contrib-uglify');
     // Default task(s).
     grunt.registerTask('default', ['less']);
 };

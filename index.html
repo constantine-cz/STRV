@@ -39,14 +39,16 @@
                 <h2>What is Posli</h2>
                 <p>Posli is platform that combines the best of instant messaging and task-list management and improves your everyday workflow with simple but efficient user interface.</p>
             </div>
+            <span data-picture data-alt="What is Posli">
+                <span data-src="gfx/macbook_mobile.png" data-media="(max-width: 767px)"></span>
+            </span>
 
-            <img src="gfx/macbook_mobile.png" alt="Macbook" />
         </div><!-- about -->
 
         <div id="everywhere">
             <div class="inner">
                 <h2>Everywhere</h2>
-                <p>Android, iOS, Mac, PC, Web...<br />work everywhere you want to. You’ll be always ready with our responsive web app and iOS and Android app.</p>
+                <p>Android, iOS, Mac, PC, Web... work everywhere you want to. You’ll be always ready with our responsive web app and iOS and Android app.</p>
             </div>
         </div><!-- everywhere -->
 
@@ -55,23 +57,29 @@
                 <h2>Task Management</h2>
                 <p>Give tasks directly through instant messaging and solve them in one time. Don't jump between messengeres and task manageres, stay productive in Posli.</p>
 
-                <img src="gfx/iphone_mobil.png" alt="iPhone" />
+                <span data-picture data-alt="Task Management">
+                    <span data-src="gfx/iphone_mobil.png" data-media="(max-width: 767px)"></span>
+                </span>
             </div>
         </div><!-- task -->
 
         <div id="features">
             <div class="inner">
-                <img src="gfx/icons/search.png" alt="Smart Search" />
-                <h2>Smart Search</h2>
-                <p>Search through all your messages, contacts and tasks. We have the most powerful search.</p>
-
-                <img src="gfx/icons/messaging.png" alt="Instant Messaging" />
-                <h2>Instant Messaging</h2>
-                <p>Don't jump from emails to sms and then to company messenger. All in Posli.</p>
-
-                <img src="gfx/icons/file.png" alt="File Sharing" />
-                <h2>File Sharing</h2>
-                <p>Send files to your team mates. Images, videos, sound, everthing you want.</p>
+                <div class="box">
+                    <img src="gfx/icons/search.png" alt="Smart Search" />
+                    <h2>Smart Search</h2>
+                    <p>Search through all your messages, contacts and tasks. We have the most powerful search.</p>
+                </div>
+                <div class="box">
+                    <img src="gfx/icons/messaging.png" alt="Instant Messaging" />
+                    <h2>Instant Messaging</h2>
+                    <p>Don't jump from emails to sms and then to company messenger. All in Posli.</p>
+                </div>
+                <div class="box">
+                    <img src="gfx/icons/file.png" alt="File Sharing" />
+                    <h2>File Sharing</h2>
+                    <p>Send files to your team mates. Images, videos, sound, everthing you want.</p>
+                </div>
             </div>
         </div><!-- features -->
 
@@ -80,17 +88,20 @@
                 <h2>Sign up for beta</h2>
                 <p>Sign Up for beta right now and be one of the firsts. With Posli you fix your workflow and become more efficient.</p>
             </div>
-            
+
             <form class="request" method="post">
                 <input type="email" name="email" class="email" placeholder="Input Email for Beta" />
                 <input type="submit" name="submit" class="submit" value="Request" />
             </form>
-            
+
             <div id="sm">
                 Share on <br class="showmini" />
                 <a href="#" class="fb"><span></span></a>
                 <a href="#" class="twitter"><span></span></a>
             </div>
         </div><!-- signup -->
+
+        <script src="js/jquery-1.11.2.min.js" type="text/javascript"></script>
+        <script src="js/picturefill.min.js" type="text/javascript" async></script>
     </body>
 </html>
