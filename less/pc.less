@@ -52,10 +52,42 @@
             width: 800px;
             margin: 0 auto;
         }
+        .nowrap{
+            min-width: 760px;
+            margin: 0 auto;
+            padding: 60px 0;
+            overflow: hidden;
+        }
+        .box{
+            width: 100% / 3 !important;
+            margin: 0;
+
+            &.mobile{
+                .icon{ 
+                    background: url(../gfx/e_mobile.png) 50% 100% no-repeat;
+                }
+            }
+            &.desktop{
+                .icon{ 
+                    background: url(../gfx/e_desktop.png) 50% 100% no-repeat;
+                }
+            }
+            &.web{
+                .icon{ 
+                    background: url(../gfx/e_web.png) 50% 100% no-repeat;
+                }
+            }
+        }
+        .icon{
+            height: 215px;
+            span{
+                display: block;
+            }
+        }
     }
     #task{
         padding: 0;
-        
+
         .inner{
             margin-left: 400px;
             max-width: 700px;
@@ -76,11 +108,11 @@
             padding: 0;
         }
         .box{
-            width: 33%;
+            width: 100% / 3;
             float: left;
             padding: 0 25px;
             text-align: center;
-            
+
             h2{
                 margin-bottom: 30px;
             }
@@ -91,6 +123,14 @@
     }
     #signup{
         text-align: center;
+
+        .request{
+            padding: 35px 0;
+        }
+        .inner{
+            max-width: 768px;
+            margin: 0 auto;
+        }
     }
 
     .request{
@@ -115,6 +155,32 @@
 
 }
 
+.fb, .twitter{
+    width: 48px;
+    height: 48px;
+    line-height: 48px;
+    margin: 0 5px;
+}
+.fb {
+    span{
+        width: 7px;
+        height: 17px;
+        background: url(../gfx/icons/sm.png) 0 -70px no-repeat;
+    }
+    &:hover span, &:active span{
+        background: url(../gfx/icons/sm.png) 0 -88px no-repeat;
+    }
+}
+.twitter {
+    span{
+        width: 16px;
+        height: 14px;
+        background: url(../gfx/icons/sm.png) -9px -70px no-repeat;
+    }
+    &:hover span, &:active span{
+        background: url(../gfx/icons/sm.png) -9px -88px no-repeat;
+    }
+}
 
 
 @media (min-width: 1280px){
