@@ -26,11 +26,14 @@
             </form>
 
             <div id="menu">
-                <ul>
-                    <li class="active"><a href="#">About</a></li>
-                    <li><a href="#">Features</a></li>
-                    <li><a href="#">Sign up</a></li>
-                </ul>
+                <div class="inner">
+                    <a href="#" class="logo_small"><img src="gfx/logo_small.png" alt="POSLI" /></a> 
+                    <ul>
+                        <li class="active"><a href="#">About</a></li>
+                        <li><a href="#">Features</a></li>
+                        <li><a href="#">Sign up</a></li>
+                    </ul>
+                </div>
             </div>
         </div><!-- header -->
 
@@ -52,7 +55,7 @@
                     <h2>Everywhere</h2>
                     <p>Android, iOS, Mac, PC, Web... work everywhere you want to. You’ll be always ready with our responsive web app and iOS and Android app.</p>
                 </div>
-                
+
                 <div class="nowrap">
                     <div class="box mobile">
                         <div class="icon"></div>
@@ -135,12 +138,22 @@
 
         <script src="js/jquery-1.11.2.min.js" type="text/javascript"></script>
         <script src="js/picturefill.min.js" type="text/javascript" async></script>
-        
+
         <script type="text/javascript">
-            if($(window).width() >= 768 ){
+            if ($(window).width() >= 768) {
                 $("#signup .request").insertAfter($("#signup .inner h2"));
                 $("#signup .request .email").attr("placeholder", "Your Email");
             }
+
+            $(window).on("scroll", function() {
+                console.log($("#header").outerHeight());
+                if ($(window).scrollTop() >= ($("#header").outerHeight() - $("#menu").outerHeight())) {
+                    $("#menu").addClass("fixed");
+                }
+                else {
+                    $("#menu").removeClass("fixed");
+                }
+            });
         </script>
     </body>
 </html>
