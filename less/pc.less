@@ -27,7 +27,8 @@
             position: fixed;
             top: 0;
             background: #232323;
-
+            z-index: 50;
+            
             .inner{
                 max-width: 960px;
             }
@@ -59,6 +60,9 @@
 
         .inner{
             width: 680px;
+        }
+        .btn{
+            display: inline-block;
         }
     }
     #everywhere{
@@ -202,6 +206,13 @@
 
 
 @media (min-width: 1280px){
+    #header{
+        background: url(../gfx/bg_big.jpg) 50% -540px no-repeat;
+
+        h1{
+            margin: 25px 0;
+        }
+    }
     #about{
         background: url(../gfx/macbook.png) 115% 155px no-repeat;
 
