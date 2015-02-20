@@ -27,7 +27,17 @@
 
             <div id="menu">
                 <div class="inner">
-                    <a href="#" class="logo_small"><img src="gfx/logo_small.png" alt="POSLI" /></a> 
+                    <a href="#" class="logo_small">
+                        <span data-picture data-alt="POSLI">
+                                <span data-src="gfx/logo_small.png" data-media="(min-width: 768px)"></span>
+                                <span data-src="gfx/logo_small_2x.png" data-media="(min-width: 768px) and (min-device-pixel-ratio: 1.5)"></span>
+
+                                <!-- Fallback content for non-JS browsers. Same img src as the initial, unqualified source element. -->
+                                <noscript>
+                                <img src="gfx/logo_small.png" alt="POSLI">
+                                </noscript>
+                            </span>
+                    </a> 
                     <ul>
                         <li class="active"><a href="#">About</a></li>
                         <li><a href="#">Features</a></li>
@@ -96,21 +106,48 @@
                 <div class="inner">
                     <div class="box">
                         <div class="icon">
-                            <img src="gfx/icons/search.png" alt="Smart Search" />
+                            <span data-picture data-alt="Smart Search">
+                                <span data-src="gfx/icons/search_mobile.png"></span>
+                                <span data-src="gfx/icons/search.png" data-media="(min-width: 768px)"></span>
+                                <span data-src="gfx/icons/search_2x.png" data-media="(min-width: 768px) and (min-device-pixel-ratio: 1.5)"></span>
+
+                                <!-- Fallback content for non-JS browsers. Same img src as the initial, unqualified source element. -->
+                                <noscript>
+                                <img src="search.jpg" alt="Smart Search">
+                                </noscript>
+                            </span>
                         </div>
                         <h2>Smart Search</h2>
                         <p>Search through all your messages, contacts and tasks. We have the most powerful search.</p>
                     </div>
                     <div class="box">
                         <div class="icon">
-                            <img src="gfx/icons/messaging.png" alt="Instant Messaging" />
+                            <span data-picture data-alt="Instant Messaging">
+                                <span data-src="gfx/icons/messaging_mobile.png"></span>
+                                <span data-src="gfx/icons/messaging.png" data-media="(min-width: 768px)"></span>
+                                <span data-src="gfx/icons/messaging_2x.png" data-media="(min-width: 768px) and (min-device-pixel-ratio: 1.5)"></span>
+
+                                <!-- Fallback content for non-JS browsers. Same img src as the initial, unqualified source element. -->
+                                <noscript>
+                                <img src="messaging.jpg" alt="Instant Messaging">
+                                </noscript>
+                            </span>
                         </div>
                         <h2>Instant Messaging</h2>
                         <p>Don't jump from emails to sms and then to company messenger. All in Posli.</p>
                     </div>
                     <div class="box">
                         <div class="icon">
-                            <img src="gfx/icons/file.png" alt="File Sharing" />
+                            <span data-picture data-alt="File Sharing">
+                                <span data-src="gfx/icons/file_mobile.png"></span>
+                                <span data-src="gfx/icons/file.png" data-media="(min-width: 768px)"></span>
+                                <span data-src="gfx/icons/file_2x.png" data-media="(min-width: 768px) and (min-device-pixel-ratio: 1.5)"></span>
+
+                                <!-- Fallback content for non-JS browsers. Same img src as the initial, unqualified source element. -->
+                                <noscript>
+                                <img src="file.jpg" alt="File Sharing">
+                                </noscript>
+                            </span>
                         </div>
                         <h2>File Sharing</h2>
                         <p>Send files to your team mates. Images, videos, sound, everthing you want.</p>

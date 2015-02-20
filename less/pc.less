@@ -12,6 +12,10 @@
     }
     #header{
         background: url(../gfx/bg.jpg) 50% -310px no-repeat;
+        @media (min-device-pixel-ratio: 1.5){
+            background: url(../gfx/bg_2x.jpg) 50% -310px no-repeat;
+            background-size: 1548.5px 1035.5px;
+        }
         padding: 150px 0;
         height: 650px;
 
@@ -28,7 +32,7 @@
             top: 0;
             background: #232323;
             z-index: 50;
-            
+
             .inner{
                 max-width: 960px;
             }
@@ -55,6 +59,11 @@
     }
     #about{
         background: url(../gfx/macbook.png) 640px 155px no-repeat;
+        @media (min-device-pixel-ratio: 1.5){
+            background: url(../gfx/macbook_2x.png) 640px 155px no-repeat;
+            background-size: 754px 437.5px;
+        }
+
         padding: 245px 0;
         height: 735px;
 
@@ -87,16 +96,28 @@
             &.mobile{
                 .icon{ 
                     background: url(../gfx/e_mobile.png) 50% 100% no-repeat;
+                    @media (min-device-pixel-ratio: 1.5){
+                        background: url(../gfx/e_mobile_2x.png) 50% 100% no-repeat;
+                        background-size: 97px 182px;
+                    }
                 }
             }
             &.desktop{
                 .icon{ 
                     background: url(../gfx/e_desktop.png) 50% 100% no-repeat;
+                    @media (min-device-pixel-ratio: 1.5){
+                        background: url(../gfx/e_desktop_2x.png) 50% 100% no-repeat;
+                        background-size: 243px 145px;
+                    }
                 }
             }
             &.web{
                 .icon{ 
                     background: url(../gfx/e_web.png) 50% 100% no-repeat;
+                    @media (min-device-pixel-ratio: 1.5){
+                        background: url(../gfx/e_web_2x.png) 50% 100% no-repeat;
+                        background-size: 166px 181px;
+                    }
                 }
             }
         }
@@ -116,6 +137,10 @@
         }
         .container{
             background: #f2f6f7 url(../gfx/iphone.png) -50px -235px no-repeat;
+            @media (min-device-pixel-ratio: 1.5){
+                background: url(../gfx/iphone_2x.png) -20px -235px no-repeat;
+                background-size: 457.5px 1038.5px;
+            }
             padding-top: 240px;
             height: 580px;
         }
@@ -188,9 +213,17 @@
         width: 7px;
         height: 17px;
         background: url(../gfx/icons/sm.png) 0 -70px no-repeat;
+        @media (min-device-pixel-ratio: 1.5){
+            background: url(../gfx/icons/sm_2x.png) 0 0 no-repeat;
+            background-size: 23px 33px;
+        }
     }
     &:hover span, &:active span{
         background: url(../gfx/icons/sm.png) 0 -88px no-repeat;
+        @media (min-device-pixel-ratio: 1.5){
+            background: url(../gfx/icons/sm_2x.png) 0 -17px no-repeat;
+            background-size: 23px 33px;
+        }
     }
 }
 .twitter {
@@ -198,16 +231,26 @@
         width: 16px;
         height: 14px;
         background: url(../gfx/icons/sm.png) -9px -70px no-repeat;
+        @media (min-device-pixel-ratio: 1.5){
+            background: url(../gfx/icons/sm_2x.png) -8px 0px no-repeat;
+            background-size: 23px 33px;
+        }
     }
     &:hover span, &:active span{
         background: url(../gfx/icons/sm.png) -9px -88px no-repeat;
+        @media (min-device-pixel-ratio: 1.5){
+            background: url(../gfx/icons/sm_2x.png) -8px -17px no-repeat;
+            background-size: 23px 33px;
+        }
     }
 }
 
 
 @media (min-width: 1280px){
     #header{
-        background: url(../gfx/bg_big.jpg) 50% -540px no-repeat;
+        background: url(../gfx/bg_big.jpg) 50% -260px no-repeat;
+        height: 1280px;
+        padding: 450px 0;
 
         h1{
             margin: 25px 0;
