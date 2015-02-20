@@ -1,0 +1,43 @@
+<ifModule mod_expires.c>
+    ExpiresActive On
+    ExpiresByType image/gif A604800
+    ExpiresByType image/png A604800
+    ExpiresByType image/jpg A604800
+    ExpiresByType image/x-icon A604800
+    ExpiresByType application/pdf A604800
+    ExpiresByType application/x-javascript A604800
+    ExpiresByType text/plain A604800
+    ExpiresByType text/css A604800
+</ifModule>
+
+<ifModule mod_headers.c>
+    # Turn on Expires and set default expires to 1 day
+    ExpiresActive On
+    ExpiresDefault A86400
+
+    # Set up caching on media files for 1 week
+    <filesMatch ".(ico|gif|jpg|jpeg|png|flv|pdf|swf|mov|mp3|wmv|ppt)$">
+        ExpiresDefault A604800
+        Header append Cache-Control "public"
+    </filesMatch>
+
+    # Set up 7 days caching on commonly updated files
+    <filesMatch ".(xml|txt|html|js|css)$">
+        ExpiresDefault A604800
+        Header append Cache-Control "private, must-revalidate"
+    </filesMatch>
+
+    # Force no caching for dynamic files
+    <filesMatch ".(php|cgi|pl|htm)$">
+        ExpiresDefault A0
+        Header set Cache-Control "no-store, no-cache, must-revalidate, max-age=0"
+        Header set Pragma "no-cache"
+    </filesMatch>
+</ifModule>
+
+<IfModule mod_deflate.c>
+    AddOutputFilterByType DEFLATE text/html text/plain text/xml text/css text/javascript
+    BrowserMatch ^Mozilla/4 gzip-only-text/html
+    BrowserMatch ^Mozilla/4\.0[678] no-gzip
+    BrowserMatch \bMSIE !no-gzip !gzip-only-text/html
+</IfModule>
